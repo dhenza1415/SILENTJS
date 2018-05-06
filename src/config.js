@@ -3,9 +3,6 @@ const { hostname, platform } = require('os');
 const whichPlatform = platform() === 'darwin' ? 'MAC' : 'win32';
 
 const config = {
-  LINE_DOMAIN_INDO: 'gd2i.line.naver.jp',
-  LINE_DOMAIN_FAST: 'gfv.line.naver.jp',
-  LINE_DOMAIN_TOOFAST: 't.line.naver.jp',
   LINE_DOMAIN: 'gf.line.naver.jp',
   LINE_DOMAIN_2ND: 'gd2.line.naver.jp',
   LINE_DOMAIN_3RD: 'gfs.line.naver.jp', 
