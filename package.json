@@ -1,5 +1,5 @@
 {
-  "name": "alphat-new-generation",
+  "name": "LineEtotJS",
   "version": "0.6.9",
   "description": "LINE",
   "main": "./src/main.js",
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/m.rakha.f/alphat-new-generation.git"
+    "url": "git+https://gitlab.com/teamanubot/LineEtotJS.git"
   },
-  "author": "GoogleX <haxor-133@protonmail.com>",
+  "author": "Rivai <rivaimunthe02@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "qrcode-terminal": "^0.11.0",
@@ -29,9 +29,9 @@
     "moment": "^2.18.1"
   },
   "bugs": {
-    "url": "https://gitlab.com/m.rakha.f/alphat-new-generation/issues"
+    "url": "https://gitlab.com/teamanubot/LineEtotJS/issues"
   },
-  "homepage": "https://gitlab.com/m.rakha.f/alphat-new-generation#README",
+  "homepage": "https://gitlab.com/teamanubot/LineEtotJS#README",
   "keywords": [
     "line"
   ]
