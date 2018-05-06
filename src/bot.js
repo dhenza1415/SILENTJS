@@ -8,7 +8,6 @@ Terima Kasih Kepada @Alfathdirk @TCR_TEAM @Raka_GoogleX\n\
 =========================================\n\
 \nNOTE : Ini Adalah AlphatJS Lama Buatan @Alfathdirk @TCR_TEAM Dan Ini Telah Dikembangin Oleh @TAB_TEAM\nTolong Untuk Tidak Perjual-Belikan Script Ini!\n\
 =======nekopoi RUNNING=======");
-//Ikkeh//
 
 /*
 | This constant is for auth/login
