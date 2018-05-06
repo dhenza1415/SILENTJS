@@ -98,12 +98,12 @@ class LineAPI {
   _qrCodeLogin() {
     this.setTHttpClient();
     return new Promise((resolve, reject) => {
-    this._client.getAuthQrcode(true, 'LineAlphatFork-PC',(err, result) => {
+    this._client.getAuthQrcode(true, 'TeamAnuBot-PC',(err, result) => {
       const qrcodeUrl = `line://au/q/${result.verifier}`;
       qrcode.generate(qrcodeUrl,{small: true});
       console.info(`\n\nlink qr code is: ${qrcodeUrl}`)
       Object.assign(this.config.Headers,{ 'X-Line-Access': result.verifier });
-        unirest.get('https://gd2.line.naver.jp/Q')
+        unirest.get('https://gf.line.naver.jp/Q')
           .headers(this.config.Headers)
           .timeout(120000)
           .end(async (res) => {
@@ -145,7 +145,7 @@ class LineAPI {
 				 reqx.password = rsaCrypto.credentials;
 				 reqx.keepLoggedIn = true;
 				 reqx.accessLocation = this.config.ip;
-				 reqx.systemName = 'LineAlphatFork-PC';
+				 reqx.systemName = 'TeamAnuBot-PC';
 				 reqx.e2eeVersion = 0;
 				 try{
 					 this._client.loginZ(reqx,
