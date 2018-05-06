@@ -1,12 +1,5 @@
-# alphat-new-generation
-Forked version of LineAlphat JS #DEV #22/12/2017 #18PM
-<br>LineAlphat -> https://github.com/alfathdirk/LineAlphatJS<br><br>Status: Very Good
-
-<hr>
-
-Installing Node.js
-------
-- `pkg install nodejs-current` or `yum install nodejs-current`
+Line Etot JS
+`Version : Rework TAB`
 
 # require node >= v8.x.x
 check your nodejs version
@@ -14,46 +7,37 @@ check your nodejs version
 [upgrade nodejs](https://google.com/)
 
 
-How to run bot for the first time ?
+How to run ?
 ------
-- `git clone https://gitlab.com/m.rakha.f/alphat-new-generation.git`
-- `cd alphat-new-generation && npm install`
-- `insert your admin mid in main.js`
+- `git clone https://gitlab.com/teamanubot/LineEtotJS.git`
+- `cd LineEtotJS && npm install`
 - `npm start`
 
-IMPORTANT
-------
-**PLEASE DO `npm i` FOR THIS UPDATE -> #27/10/2017**
+New
+-------
+- Fixed LoginQR
+
+Note
+-------
+- Jangan Perjual Belikan Script Ini!
+- Ini Alphat Lama Tapi Di Upgrade
+- Gunakan Script Ini Dengan Bijak!
 
 Still work :construction_worker:
 ----
-**CHANGELOG**
-- Bug fixed (LOG_OUT)
-
-**TO - DO**
-- Nothing
-
-CMD / KEYWORD
-------
-**type !key for the keyword**
-
-How to activate AutoLike feature ?
-------
-- `1. Goto src/bot.js`
-- `2. Then find this " //LINE.aLike() //AutoLike (CAUSE LAG) " (without quotes)`
-- ![1](https://image.prntscr.com/image/7W3W_nc1TTu-vVzyhHnJjw.png)
-- `3. Change into this " LINE.aLike() " (without quotes)`
-- ![2](https://image.prntscr.com/image/UVbSbNoAT66b3u6ubPfQLw.png)
-- `4. DONE`
+**TODO** features
+- Implement All 
+- Improve logic
 
 Author
 ------
 [@alfathdirk](https://instagram.com/alfathdirk) (LINE ALPHAT JS)<br>
-[@GoogleX](https://fb.me/m.rakha.f) (LINE ALPHAT-FORK)
+[@GoogleX](https://fb.me/m.rakha.f) (LINE ALPHAT-FORK)<br>
+[@rivaimunte](https://instagram.com/rivaimunte02) (LINE ETOT JS)
 
 Contact Me / Need Help ?
 ------
-[@LINE](http://line.me/ti/p/MB6mnZWbu_) (GoogleX)
+[@LINE](http://line.me/ti/p/h_xdy2Clas) (rivaimunte)
 
 FAQ (Frequently Asked Questions)
 ------
