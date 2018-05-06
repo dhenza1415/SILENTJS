@@ -1,22 +1,13 @@
 const LineConnect = require('./connect');
 const LINE = require('./main.js');
 console.info("\n\
-   .::::                                 .::          .::      .::\n\
- .:    .::                               .::           .::   .::  \n\
-.::           .::       .::       .::    .::   .::      .:: .::   \n\
-.::         .::  .::  .::  .::  .::  .:: .:: .:   .::     .::     \n\
-.::   .::::.::    .::.::    .::.::   .:: .::.::::: .::  .:: .::   \n\
- .::    .:  .::  .::  .::  .::  .::  .:: .::.:         .::   .::  \n\
-  .:::::      .::       .::         .:: .:::  .::::   .::      .::\n\
-                                 .::                              \n");
-console.info("\n\
 =========================================\n\
-BotName: LINE Alphat JS\n\
-Version: FORKED VERSION\n\
-Thanks to @Alfathdirk @TCR_TEAM\n\
+BotName: LINE Etot JS\n\
+Rework : Team Anu Bot\n\
+Terima Kasih Kepada @Alfathdirk @TCR_TEAM @Raka_GoogleX\n\
 =========================================\n\
-\nNOTE : This bot is made by @Alfathdirk @TCR_TEAM and has been forked by @GoogleX !\n\
-***Copyright belongs to the author***");
+\nNOTE : Ini Adalah AlphatJS Lama Buatan @Alfathdirk @TCR_TEAM Dan Ini Telah Dikembangin Oleh @TAB_TEAM\nTolong Untuk Tidak Perjual-Belikan Script Ini!\n\
+=======nekopoi RUNNING=======");
 
 /*
 | This constant is for auth/login
@@ -24,8 +15,8 @@ Thanks to @Alfathdirk @TCR_TEAM\n\
 | Change it to your authToken / your email & password
 */
 const auth = {
-	authToken: '',
-	certificate: '',
+	authToken: ' Taro Toket Lo Disini Eh Maksud Nya Token ',
+	certificate: ' Taro Cerf Disini ',
 	email: '',
 	password: ''
 }
