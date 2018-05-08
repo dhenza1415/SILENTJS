@@ -240,8 +240,27 @@ class LineAPI {
     return await this._client.getGroupIdsInvited()
   }
 
+  async _findGroupByName(name) {
+    let group = [];
+    let groupID = await this._getGroupsJoined();
+    let groups = await this._getGroups(groupID);
+    for (let key in groups) {
+        if(groups[key].name === name){
+          group.push(groups[key].id);
+        }
+    }
+    return group;
+
+  }
+
   async _acceptGroupInvitation(groupid) {
     this._client.acceptGroupInvitation(0,groupid);
+    await this._getGroupsInvited();
+    await this._getGroupsJoined();
+    return;
+  }
+  
+  async _refrehGroup() {
     await this._getGroupsInvited();
     await this._getGroupsJoined();
     return;
@@ -257,6 +276,10 @@ class LineAPI {
 
   async _updateGroup(group) {
     return await this._client.updateGroup(0, group)
+  }
+
+  async _updateProfile(profile) {
+    return await this._client.updateProfile(0, profile)
   }
 
   _getContacts(mid) {
@@ -293,6 +316,19 @@ class LineAPI {
   
   async _acceptGroupInvitationByTicket(gid,ticketID){
     return await this._client.acceptGroupInvitationByTicket(0,gid,ticketID);
+  }
+  
+    _rejectGroupInvitation(groupIds) {
+    return this._client.rejectGroupInvitation(0,groupIds);
+  }
+  
+  async _createRoom(memberids) {
+    return await this._client.createRoom(0,[memberids]);
+  }
+
+  async _createGroup(groupName,members) {
+    await this._getAllContactIds();
+    return this._client.createGroup(0,groupName,members);
   }
   
   async _dlImg(uri, filenames, callback){
