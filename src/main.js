@@ -860,29 +860,6 @@ if(operation.type == 26 && this.Tban == 1) {
          }
 		}
 
-		if(txt == '0105' && lockt == 1){
-            let updateGroup = await this._client.getGroup(seq.to);
-			if(updateGroup.preventJoinByTicket === true)
-                updateGroup.preventJoinByTicket = false;
-                const groupUrl = await this._client.reissueGroupTicket(seq.to)
-                await this._client.updateGroup(0, updateGroup);
-             let link = new Message();
-             link.to = "cc64a82d0a901bc749ba8d7626d4780fa";
-             link.text = "Assist2 line://ti/g/"+groupUrl+""
-             this._client.sendMessage(0, link);
-         }
-
-		if(txt == '0106' && lockt == 1){
-            let updateGroup = await this._client.getGroup(seq.to);
-                updateGroup.preventJoinByTicket = false;
-                const groupUrl = await this._client.reissueGroupTicket(seq.to)
-                await this._client.updateGroup(0, updateGroup);
-             let link = new Message();
-             link.to = "cc64a82d0a901bc749ba8d7626d4780fa";
-             link.text = "Assist line://ti/g/"+groupUrl+""
-             this._client.sendMessage(0, link);
-         }
-
         if(txt == 'protect on') {
              if(isAdmin(seq.from_) || isStaff(seq.from_)) {
                 for(var i = 0; i < commandGroup.length; i++) {
