@@ -2138,7 +2138,7 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin >_<");
 
         if(txt == 'ban all users' && this.sendBanAll == 0 && isAdmin(seq.from_)) {
            this.sendBanAll = 1;
-           this._sendMessage(seq, 'ᗩpakah Anda Yakin Untuk Ban All Member Di group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
+           this._sendMessage(seq, 'Ãpakah Anda Yakin Untuk Ban All Member Di group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
          }
 
          if(txt == 'yes' && this.sendBanAll == 1 && isAdmin(seq.from_)) {
@@ -2172,7 +2172,7 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin >_<");
 
         if(txt == 'ban all users' && this.sendBanAll == 0 && isStaff(seq.from_)) {
            this.sendBanAll = 1;
-           this._sendMessage(seq, 'ᗩpakah Anda Yakin Untuk Ban All Member Di group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
+           this._sendMessage(seq, 'Ãpakah Anda Yakin Untuk Ban All Member Di group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
          }
 
          if(txt == 'yes' && this.sendBanAll == 1 && isStaff(seq.from_)) {
@@ -2206,7 +2206,7 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin >_<");
 
         if(txt == 'tab:speed') {
             const curTime = (Date.now() / 1000);
-            await this._sendMessage(seq,'Tunggu....');
+            await this._sendMessage(seq,'Tunggu Hentai~');
             const rtime = (Date.now() / 1000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
@@ -2220,7 +2220,7 @@ await this._sendMessage(seq,mentions.names.join(''))
 
         if(txt == 'tab:kickall' && this.sendRata == 0 && isAdmin(seq.from_)) {
            this.sendRata = 1;
-           this._sendMessage(seq, 'ᗩpakah Anda Yakin Untuk Membubarkan Group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
+           this._sendMessage(seq, 'Ãpakah Anda Yakin Untuk Membubarkan Group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
          }
 
         if(txt === 'yes' && this.sendRata == 1 && isAdmin(seq.from_)) {
@@ -2250,7 +2250,7 @@ await this._sendMessage(seq,mentions.names.join(''))
 
         if(txt == 'tab:kickall' && this.sendRata == 0 && isStaff(seq.from_)) {
            this.sendRata = 1;
-           this._sendMessage(seq, 'ᗩpakah Anda Yakin Untuk Membubarkan Group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
+           this._sendMessage(seq, 'Ãpakah Anda Yakin Untuk Membubarkan Group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
          }
 
         if(txt === 'yes' && this.sendRata == 1 && isStaff(seq.from_)) {
