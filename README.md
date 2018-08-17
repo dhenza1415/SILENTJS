@@ -4,7 +4,7 @@ Line Etot JS
 # require node >= v8.x.x
 check your nodejs version
 `node -v`
-[upgrade nodejs](https://google.com/search?q=cara+upgrade+nodejs)
+[upgrade nodejs](https://google.com/search?q=How+To+Update+NodeJS)
 
 
 How to run ?
