@@ -27,7 +27,7 @@ var commandGroup = [];
 var banList = []; //Banned list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
 var komenTL = "AutoLike by Bee\nline://ti/p/~kobe2k17"; //Comment for timeline
-var bcText = "Masukan teks untuk broadcast";
+var bcText = "";//Jangan Di Apa-Apa In Oke Beb :')
 var limitposts = '10'; //Output timeline post
 
 function isAdmin(param) {
@@ -497,7 +497,7 @@ class LINE extends LineAPI {
                 }
                else if(isAssist(operation.param3))
                 {
-   this.textMessage("0105",seq,operation.param2,1);
+                 this._invite(operation.param1,[operation.param3]);
                 }
               else if(isBanned(operation.param3))
                 {
@@ -556,20 +556,6 @@ class LINE extends LineAPI {
           else
             {
                banList.push(operation.param2);
-                        }
-                    }
-                }
-            }
-        }
-
-        if(operation.type == 19) { //admin kick bot
-            for(var i = 0; i < commandGroup.length; i++) {
-                  if(commandGroup[i].group == operation.param1) {
-            if(commandGroup[i].command.kick == 0) {
-		       if(isAdmin(operation.param2) || isStaff(operation.param2)) {
-			     if(isAssist(operation.param3)) {
-            	    this._leaveGroup(operation.param1);
-                            }
                         }
                     }
                 }
@@ -1982,7 +1968,7 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin >_<");
       }
 
         if(txt == 'tab:help') {
-           this._sendMessage(seq, '==============================\nтαв αℓℓ ¢σммαи∂\n==============================\n☞ Myid\n☞ Tab:Gift\n☞ Halo\n☞ TAB:Help\n☞ Tab:CreatorBot\n☞ TAB:InfoGroup\n☞ Tab:GroupCreator\n☞ Tab:Tag\n☞ Tab:Speed\n☞ Baca Read\n☞ Lihat Pembacaan Read\n☞ Tab:Setting\n☞ Hapus Pembacaan Read\n☞ Tab:Banlist\n☞ Tab:CekID\n☞ Tab:AdminList\n☞ Tab:StaffList\n☞ Tab:BlackList\n☞ Tab:TbanList\n☞ Tab:GroupList\n☞ Hak Admin Dan Staff\n☞ Apakah [Text] (Fitur Kerang Ajaib)\n\n==============================\nтαв ѕтαff ¢σммαи∂\n==============================\n☞ Response Name\n☞ Tab:Cancel\n☞ Tab:OpenUrl\n☞ Tab:CloseUrl\n☞ Tab:Bye\n☞ Tab:spam\n☞ Protect On/Off\n☞ Kick On/Off\n☞ Cancel On/Off\n☞ LockInvite On/Off\n☞ LockUpdateGroup On/Off\n☞ LockOpenQr On/Off\n☞ LockJoin On/Off\n☞ LockCancel On/Off\n☞ Tab:Kick「@」\n☞ Auto Read On/Off\n☞ Tab:Kickall\n☞ Tab:Msg\n☞ Tab:Ban\n☞ Tab:Unban\n☞ Tab:Tban\n☞ Tab:Untban\n☞ Ban All Users\n☞ Clear All Banlist\n☞ Bmsg On/Off\n☞ Tab:Change:NameGroup [Text]\n\n==============================\nтαв α∂мιи ¢σммαи∂\n==============================\n☞ Join [LinkGroup]\n☞ Tab:BackupGroup\n☞ Tab:AddAllMem\n☞ Tab:add:staff\n☞ Tab:del:staff\n☞ Tab:BroadcastGroup [Text]\n☞ Tab:AddContact\n☞ Tab:Change:Bio [Text]\n☞ Tab:Change:Nick [Text]\n☞ Tab:CreateGroup [Jumlah]-[Nama]/[Mid]\n\n==============================฿Ɏ ₮Ɇ₳₥ ₳₦Ʉ ฿Ø₮\n==============================');
+           this._sendMessage(seq, '==============================\nтαв αℓℓ ¢σммαи∂\n==============================\n☞ Myid\n☞ Tab:Gift\n☞ Halo\n☞ TAB:Help\n☞ Tab:CreatorBot\n☞ TAB:InfoGroup\n☞ Tab:GroupCreator\n☞ Tab:Tag\n☞ Tab:Speed\n☞ Baca Read\n☞ Lihat Pembacaan Read\n☞ Tab:Setting\n☞ Hapus Pembacaan Read\n☞ Tab:Banlist\n☞ Tab:CekID\n☞ Tab:AdminList\n☞ Tab:StaffList\n☞ Tab:BlackList\n☞ Tab:TbanList\n☞ Tab:GroupList\n☞ Hak Admin Dan Staff\n☞ Apakah [Text] (Fitur Kerang Ajaib)\n\n==============================\nтαв ѕтαff ¢σммαи∂\n==============================\n☞ Response Name\n☞ Tab:Cancel\n☞ Tab:OpenUrl\n☞ Tab:CloseUrl\n☞ Tab:Bye\n☞ Tab:spam\n☞ Auto Respon On/Off\n☞ Protect On/Off\n☞ Kick On/Off\n☞ Cancel On/Off\n☞ LockInvite On/Off\n☞ LockUpdateGroup On/Off\n☞ LockOpenQr On/Off\n☞ LockJoin On/Off\n☞ LockCancel On/Off\n☞ Tab:Kick「@」\n☞ Auto Read On/Off\n☞ Tab:Kickall\n☞ Tab:Msg\n☞ Tab:Ban\n☞ Tab:Unban\n☞ Tab:Tban\n☞ Tab:Untban\n☞ Ban All Users\n☞ Clear All Banlist\n☞ Bmsg On/Off\n☞ Tab:Change:NameGroup [Text]\n\n==============================\nтαв α∂мιи ¢σммαи∂\n==============================\n☞ Join [LinkGroup]\n☞ Tab:BackupGroup\n☞ Tab:AddAllMem\n☞ Tab:add:staff\n☞ Tab:del:staff\n☞ Tab:BroadcastGroup [Text]\n☞ Tab:AddContact\n☞ Tab:Change:Bio [Text]\n☞ Tab:Change:Nick [Text]\n☞ Tab:CreateGroup [Jumlah]-[Nama]/[Mid]\n\n==============================฿Ɏ ₮Ɇ₳₥ ₳₦Ʉ ฿Ø₮\n==============================');
         }
 
          if(txt == 'hak admin dan staff' || txt == 'hak staff dan admin') {
@@ -2434,33 +2420,6 @@ await this._sendMessage(seq,mentions.names.join(''))
                this._sendMessage(seq, 'I Love Hentai~');
         }
     }
-
-//Tab:CreateGroup <jumlah>-<NamaGrup>/<mid>
-//Tab:CreateGroup 100-NamaGrupnya/midkorban
-        if(cmd == 'Tab:CreateGroup' && isAdmin(seq.from_)) { 
-            const [ j, u ] = payload.split('-');
-            const [ n, m ] = u.split('/');
-            let add = await this._client.findAndAddContactsByMid(seq, `${m}`);
-            for (var i = 0; i < j; i++) {
-                await this._createGroup(`${n}`,[m]);
-             let gid = await this._findGroupByName(`${n}`);
-             for (var i = 0; i < gid.length; i++) {
-                 this._leaveGroup(gid[i]);
-            }
-          }
-        }
-
-        if(txt == 'tab:backupgroup' && isAdmin(seq.from_)) {
-            let mem = [];
-            let b = await this._getGroup(seq.to);
-            let { listMember } = await this.searchGroup(seq.to);
-                  for(var i = 0; i < listMember.length; i++) {
-                       mem.push(listMember[i].mid);
-                  this._client.findAndAddContactsByMid(0,listMember[i].mid);
-                   }
-             let group = await this._createGroup(b.name, mem);
-            this._sendMessage(seq, "Done Admin ( ´･ω･`)");
-         }
 
         if(cmd == 'Tab:AddAllMem' && isAdmin(seq.from_)) { 
             let { listMember } = await this.searchGroup(seq.to);
