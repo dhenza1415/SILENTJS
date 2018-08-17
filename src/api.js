@@ -55,7 +55,7 @@ class LineAPI {
     path: this.config.LINE_HTTP_URL,
     https: true
   }) {
-    options.headers['X-Line-Application'] = 'IOSIPAD\x097.14.0\x09iPhone_OS\x0910.12.0';
+    options.headers['X-Line-Application'] = 'IOSIPAD\t8.11.0\tTeamAnuBot-PC\t8.11.0';
     this.options = options;
     this.connection =
       thrift.createHttpConnection(this.config.LINE_DOMAIN_3RD, 443, this.options);
@@ -103,7 +103,7 @@ class LineAPI {
       qrcode.generate(qrcodeUrl,{small: true});
       console.info(`\n\nlink qr code is: ${qrcodeUrl}`)
       Object.assign(this.config.Headers,{ 'X-Line-Access': result.verifier });
-        unirest.get('https://gf.line.naver.jp/Q')
+        unirest.get('https://gd2.line.naver.jp/Q')
           .headers(this.config.Headers)
           .timeout(120000)
           .end(async (res) => {
@@ -220,6 +220,22 @@ class LineAPI {
     message.text = txt;
     return this._client.sendMessage(0, message);
   }
+  
+// DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING //
+// JANGAN ANDA COBA COBA MENGUBAH JIKA ANDA TIDAK TAHU //
+// NEXT UPDATE | //
+//                           V //
+  //_sendMessage(msg, txt, contentMetadata = {}, seq = 0) {
+    //msg =  Message();
+    //msg.to, msg._from = msg.to, client.profile.mid;
+    //msg.text = txt;
+    //msg.contentType, msg.contentMetadata = seq, contentMetadata;
+    //if(to !== client._messageReq) {
+      //client._messageReq[to] = -1;
+    //}
+    //client.messageReq[to] += 1;
+    //return this._client.sendMessage(client._messageReq[to], msg);
+  //}
 
   _kickMember(group,memid) {
     return this._client.kickoutFromGroup(0,group,memid);
@@ -236,6 +252,27 @@ class LineAPI {
   async _myProfile() {
     return await this._client.getProfile();
   }
+  
+  async _getSettings() {
+    return await this._getSettings()
+  }
+  
+  async _getUserTicket() {
+    return await this._getUserTicket()
+  }
+  
+  async _updateProfile(profileObject) {
+    return await this._updateProfile(0,profileObject)
+  }
+  
+  async _updateSettings(settingObject) {
+    return await this._updateSettings(0,settingObject)
+  }
+  
+  async _updateProfileAttribute(attrId, value) {
+    return await this._updateProfileAttribute(0,attrId, value)
+  }
+  
   async _getGroupsInvited() {
     return await this._client.getGroupIdsInvited()
   }
@@ -348,6 +385,34 @@ class LineAPI {
       let formatted = moment("/Date("+timestamp+"-0700)/").toString();
 	  return formatted;
   }
+  
+  async _sendFileByUrl(message,uri) {
+    let media = 1;
+    if (!fs.existsSync(__dirname+'/tmp')){
+        await fs.mkdirSync(__dirname+'/tmp');
+    }
+    let head = await unirest.head(uri,async (res) => {
+      let formatFile =  res.headers['content-type'].split('/')[1].toLowerCase();
+      let locationFile = __dirname + `/tmp/${Math.floor(Math.random() * 100)}.${formatFile}`;
+      await unirest.get(uri).end().pipe(fs.createWriteStream(locationFile));
+      return this._sendFile(message,locationFile,media);
+    });
+  }
+  
+async leertmusic(to, songname){
+		const option = {
+			url: 'http://corrykalam.gq/joox.php?song='+songname,
+			method: 'GET',
+			headers: {
+				'User-Agent': await random_ua.generate()
+			},
+		};
+		const request = await rp(option);
+		const json = JSON.parse(request);
+		const music = json.url
+		console.log(music)
+		this._sendFileByUrl(to, music);
+    }
   
   async _sendImageWithURL(to,urls,extF,filepaths){
 	if(isImg(extF)){
