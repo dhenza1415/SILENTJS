@@ -14,7 +14,7 @@ const { Message, OpType, Location } = require('../curve-thrift/line_types');
 
 var myStaff = ['']; //Taro Mid Yang Mau Dijadiin Staff/Wakil Admin
 
-const myAdmin = ['']; //Mid Lu Supaya Jadi Admin
+const myAdmin = ['ufdc20b3a00b5e8f31e4f91017eb361b0']; //Mid Lu Supaya Jadi Admin
 
 const myAssist = ['']; //Mid Bot Lu Jika Ada Bot 2 Atau Lebih
 
