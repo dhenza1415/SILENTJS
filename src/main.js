@@ -14,19 +14,19 @@ const { Message, OpType, Location } = require('../curve-thrift/line_types');
 
 var myStaff = ['']; //Taro Mid Yang Mau Dijadiin Staff/Wakil Admin
 
-const myAdmin = ['ufdc20b3a00b5e8f31e4f91017eb361b0']; //Mid Lu Supaya Jadi Admin
+const myAdmin = ['ufdc20b3a00b5e8f31e4f91017eb361b0','u3160d2dd9658a7acec1a2480baa6a738']; //Mid Lu Supaya Jadi Admin
 
 const myAssist = ['']; //Mid Bot Lu Jika Ada Bot 2 Atau Lebih
 
 const myBot = ['']; //Taro Mid Bot Lu Kesini (Maksud Gw Bot Yang Pake Sc Ini)
-const BoT = ['ueff8f78401c867593c6ddc8aeb8c649d','u9fec89015e171bc9a8f82ce1ded83075','ubb4183ea6b5c541817eaa3e6a8c6acfe']
+const BoT = ['ueff8f78401c867593c6ddc8aeb8c649d','ubace7dd5006c744f5aef3e412c04e219','uf658d58086736afcfe1e1c65d290a2bf','u4382d72a8552bf1024957a02728b6ffe','u08719b87716863d883afc9f79e39a556']
 var BlackListPermanen = ['u502fd6dcacda727a8d85bcb6708fa403'];
 var BackupList = [];
 var TbanList = []; //Users Banned Chat
 var commandGroup = [];
 var banList = []; //Banned list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
-var komenTL = "AutoLike by Bee\nline://ti/p/~kobe2k17"; //Comment for timeline
+var komenTL = "AutoLike by Bee\nline://ti/p/~dhenz415"; //Comment for timeline
 var bcText = "";//Jangan Di Apa-Apa In Oke Beb :')
 var limitposts = '10'; //Output timeline post
 
@@ -417,7 +417,7 @@ class LINE extends LineAPI {
             {
              let out = new Message();
              out.to = operation.param1;
-             out.text = "Yah Kok Leave? Padahal Belom Minta Pap Naked >_<"
+             out.text = "Baper lo ya left"
 			     this._client.sendMessage(0, out);
                         }
                     }
@@ -1071,7 +1071,7 @@ if(operation.type == 26 && this.Tban == 1) {
            }
         }
 
-		if(vx[1] == "tab:addcontact" && seq.from_ == vx[0] && waitMsg == "yes"){
+		if(vx[1] == "addcontact" && seq.from_ == vx[0] && waitMsg == "yes"){
 			let panjang = txt.split("");
 			if(txt == "cancel"){
 				vx[0] = "";vx[1] = "";waitMsg = "no";vx[2] = "";vx[3] = "";
@@ -1148,7 +1148,7 @@ if(operation.type == 26 && this.Tban == 1) {
 			}
 		}
 
-		if(txt == "tab:addcontact" && isAdmin(seq.from_)) {
+		if(txt == "addcontact" && isAdmin(seq.from_)) {
 			if(vx[2] == null || typeof vx[2] === "undefined" || !vx[2]){
 			    waitMsg = "yes";
 			    vx[0] = seq.from_;vx[1] = txt;vx[2] = "arg1";
@@ -1159,7 +1159,7 @@ if(operation.type == 26 && this.Tban == 1) {
 			}
 		}
 
-      if(txt == 'tab:addcontact') {
+      if(txt == 'addcontact') {
             if(isAdmin(seq.from_))
             {
             }
@@ -1968,7 +1968,7 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin >_<");
       }
 
         if(txt == 'tab:help') {
-           this._sendMessage(seq, '==============================\nтαв αℓℓ ¢σммαи∂\n==============================\n☞ Myid\n☞ Tab:Gift\n☞ Halo\n☞ TAB:Help\n☞ Tab:CreatorBot\n☞ TAB:InfoGroup\n☞ Tab:GroupCreator\n☞ Tab:Tag\n☞ Tab:Speed\n☞ Baca Read\n☞ Lihat Pembacaan Read\n☞ Tab:Setting\n☞ Hapus Pembacaan Read\n☞ Tab:Banlist\n☞ Tab:CekID\n☞ Tab:AdminList\n☞ Tab:StaffList\n☞ Tab:BlackList\n☞ Tab:TbanList\n☞ Tab:GroupList\n☞ Hak Admin Dan Staff\n☞ Apakah [Text] (Fitur Kerang Ajaib)\n\n==============================\nтαв ѕтαff ¢σммαи∂\n==============================\n☞ Response Name\n☞ Tab:Cancel\n☞ Tab:OpenUrl\n☞ Tab:CloseUrl\n☞ Tab:Bye\n☞ Tab:spam\n☞ Auto Respon On/Off\n☞ Protect On/Off\n☞ Kick On/Off\n☞ Cancel On/Off\n☞ LockInvite On/Off\n☞ LockUpdateGroup On/Off\n☞ LockOpenQr On/Off\n☞ LockJoin On/Off\n☞ LockCancel On/Off\n☞ Tab:Kick「@」\n☞ Auto Read On/Off\n☞ Tab:Kickall\n☞ Tab:Msg\n☞ Tab:Ban\n☞ Tab:Unban\n☞ Tab:Tban\n☞ Tab:Untban\n☞ Ban All Users\n☞ Clear All Banlist\n☞ Bmsg On/Off\n☞ Tab:Change:NameGroup [Text]\n\n==============================\nтαв α∂мιи ¢σммαи∂\n==============================\n☞ Join [LinkGroup]\n☞ Tab:BackupGroup\n☞ Tab:AddAllMem\n☞ Tab:add:staff\n☞ Tab:del:staff\n☞ Tab:BroadcastGroup [Text]\n☞ Tab:AddContact\n☞ Tab:Change:Bio [Text]\n☞ Tab:Change:Nick [Text]\n☞ Tab:CreateGroup [Jumlah]-[Nama]/[Mid]\n\n==============================฿Ɏ ₮Ɇ₳₥ ₳₦Ʉ ฿Ø₮\n==============================');
+           this._sendMessage(seq, '==============================\nSilent αℓℓ ¢σммαи∂\n==============================\n☞ Myid\n☞ Tab:Gift\n☞ Halo\n☞ TAB:Help\n☞ Tab:CreatorBot\n☞ TAB:InfoGroup\n☞ Tab:GroupCreator\n☞ Tab:Tag\n☞ Tab:Speed\n☞ Baca Read\n☞ Lihat Pembacaan Read\n☞ Tab:Setting\n☞ Hapus Pembacaan Read\n☞ Tab:Banlist\n☞ Tab:CekID\n☞ Tab:AdminList\n☞ Tab:StaffList\n☞ Tab:BlackList\n☞ Tab:TbanList\n☞ Tab:GroupList\n☞ Hak Admin Dan Staff\n☞ Apakah [Text] (Fitur Kerang Ajaib)\n\n==============================\nтαв ѕтαff ¢σммαи∂\n==============================\n☞ Response Name\n☞ Tab:Cancel\n☞ Tab:OpenUrl\n☞ Tab:CloseUrl\n☞ Tab:Bye\n☞ Tab:spam\n☞ Auto Respon On/Off\n☞ Protect On/Off\n☞ Kick On/Off\n☞ Cancel On/Off\n☞ LockInvite On/Off\n☞ LockUpdateGroup On/Off\n☞ LockOpenQr On/Off\n☞ LockJoin On/Off\n☞ LockCancel On/Off\n☞ Tab:Kick「@」\n☞ Auto Read On/Off\n☞ Tab:Kickall\n☞ Tab:Msg\n☞ Tab:Ban\n☞ Tab:Unban\n☞ Tab:Tban\n☞ Tab:Untban\n☞ Ban All Users\n☞ Clear All Banlist\n☞ Bmsg On/Off\n☞ Tab:Change:NameGroup [Text]\n\n==============================\nтαв α∂мιи ¢σммαи∂\n==============================\n☞ Join [LinkGroup]\n☞ Tab:BackupGroup\n☞ Tab:AddAllMem\n☞ Tab:add:staff\n☞ Tab:del:staff\n☞ Tab:BroadcastGroup [Text]\n☞ Tab:AddContact\n☞ Tab:Change:Bio [Text]\n☞ Tab:Change:Nick [Text]\n☞ Tab:CreateGroup [Jumlah]-[Nama]/[Mid]\n\n==============================฿Ɏ ₮Ɇ₳₥ ₳₦Ʉ ฿Ø₮\n==============================');
         }
 
          if(txt == 'hak admin dan staff' || txt == 'hak staff dan admin') {
@@ -2069,10 +2069,10 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin >_<");
 
         if(txt == 'halo') {
             if(isAdmin(seq.from_)) {
-            this._sendMessage(seq, 'Halo Juga Admin TAB ( ´･ω･`)');
+            this._sendMessage(seq, 'Halo Juga Admin SK ( ´･ω･`)');
             }
             else if(isStaff(seq.from_)) {
-            this._sendMessage(seq, 'Halo Juga Staff TAB ( ´･ω･`)');
+            this._sendMessage(seq, 'Halo Juga Staff SK ( ´･ω･`)');
              }
              else if(isBot(seq.from_)) {
              }
@@ -2167,9 +2167,9 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin >_<");
                 this._sendMessage(seq, 'Banned All Member Di Group Ini Telah Dibatalkan >_<');
             }
 
-        if(txt == 'tab:speed') {
+        if(txt == 'sp') {
             const curTime = (Date.now() / 1000);
-            await this._sendMessage(seq,'Tunggu Hentai~');
+            await this._sendMessage(seq,'Speed terlalu cepat tuk di tangkis');
             const rtime = (Date.now() / 1000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
@@ -2181,14 +2181,14 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin >_<");
 await this._sendMessage(seq,mentions.names.join(''))
         }
 
-        if(txt == 'tab:kickall' && this.sendRata == 0 && isAdmin(seq.from_)) {
+        if(txt == 'anu' && this.sendRata == 0 && isAdmin(seq.from_)) {
            this.sendRata = 1;
-           this._sendMessage(seq, 'Ãpakah Anda Yakin Untuk Membubarkan Group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
+           this._sendMessage(seq, 'Ãpakah Anda Yakin Untuk Membubarkan Group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ');
          }
 
         if(txt === 'yes' && this.sendRata == 1 && isAdmin(seq.from_)) {
             this.sendRata = 0;
-            let txt = await this._sendMessage(seq, 'Membubarkan Group Ini Dimulai ( ´･ω･`)');
+            let txt = await this._sendMessage(seq, 'Membubarkan Group Ini Dimulai');
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(isAdmin(listMember[i].mid)) {
@@ -2213,12 +2213,12 @@ await this._sendMessage(seq,mentions.names.join(''))
 
         if(txt == 'tab:kickall' && this.sendRata == 0 && isStaff(seq.from_)) {
            this.sendRata = 1;
-           this._sendMessage(seq, 'Ãpakah Anda Yakin Untuk Membubarkan Group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
+           this._sendMessage(seq, 'Ãpakah Anda Yakin Untuk Membubarkan Group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ');
          }
 
         if(txt === 'yes' && this.sendRata == 1 && isStaff(seq.from_)) {
             this.sendRata = 0;
-            let txt = await this._sendMessage(seq, 'Membubarkan Group Ini Dimulai ( ´･ω･`)');
+            let txt = await this._sendMessage(seq, 'Membubarkan Group Ini Dimulai ');
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(isAdmin(listMember[i].mid)) {
@@ -2288,7 +2288,7 @@ await this._sendMessage(seq,mentions.names.join(''))
 
         if(txt == 'tab:creatorbot') {
            this._sendMessage(seq, 'My Creator Is Bee\nId Line : http://line.me/ti/p/~kobe2k17\n\n-тєαм αиυ вσт-');
-           seq.contentType=13;
+           seq.contentType=13;ufdc20b3a00b5e8f31e4f91017eb361b0
            seq.contentMetadata = { mid: 'ub4974c6489c969402713a974b568ee9e' };
            let font = await this._sendMessage(seq, ' ');
            }
@@ -2409,15 +2409,15 @@ await this._sendMessage(seq,mentions.names.join(''))
                this._kickMember(seq.to,[target]);
         }
 
-        if(cmd == 'Tab:spam' && isStaff(seq.from_)) {
+        if(cmd == 'spam' && isStaff(seq.from_)) {
             for(var i= 0; i < 10;  i++) {
-               this._sendMessage(seq, 'I Love Hentai~');
+               this._sendMessage(seq, '☠ཧ̐̐̐̐̐̐̐ł̐̐̐̐̐̐̐̐Ꮮ̐̐̐̐̐̐̐̐̐̐̐̐̐̐̐̐ཛ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐̐̐̐̐̐̐སོ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐̐̐ਓ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐བཽ̐̐̐̐̐̐̐̐̐̐̐̐ㄒ̌̐̐̐̐̐̐̐̐̌™☠');
         }
     }
 
-        if(cmd == 'Tab:spam' && isAdmin(seq.from_)) {
+        if(cmd == 'spam' && isAdmin(seq.from_)) {
             for(var i= 0; i < 10;  i++) {
-               this._sendMessage(seq, 'I Love Hentai~');
+               this._sendMessage(seq, '☠ཧ̐̐̐̐̐̐̐ł̐̐̐̐̐̐̐̐Ꮮ̐̐̐̐̐̐̐̐̐̐̐̐̐̐̐̐ཛ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐̐̐̐̐̐̐སོ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐̐̐ਓ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐བཽ̐̐̐̐̐̐̐̐̐̐̐̐ㄒ̌̐̐̐̐̐̐̐̐̌™☠');
         }
     }
 
