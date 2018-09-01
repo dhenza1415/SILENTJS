@@ -2,16 +2,16 @@ const LineConnect = require('./connect');
 const LINE = require('./main.js');
 console.info("\n\
 =========================================\n\
-BotName: LINE Etot JS\n\
-Rework : Team Anu Bot\n\
+BotName: LINE Silent JS\n\
+Rework : Team SilentJS\n\
 Terima Kasih Kepada @Alfathdirk @TCR_TEAM @Raka_GoogleX\n\
 =========================================\n\
-\nNOTE : Ini Adalah AlphatJS Lama Buatan @Alfathdirk @TCR_TEAM Dan Ini Telah Dikembangin Oleh @TAB_TEAM\nTolong Untuk Tidak Perjual-Belikan Script Ini!\n\
-=======nekopoi RUNNING=======");
+\nNOTE : Ini Adalah AlphatJS Lama Buatan @Alfathdirk @TCR_TEAM Dan Ini Telah Dikembangin Oleh @TAB_TEAM\n& Team SilentJS\nTolong Untuk Tidak Perjual-Belikan Script Ini!\n\
+=======Silent RUNNING=======");
 
 /*
 | This constant is for auth/login
-| 
+|
 | Change it to your authToken / your email & password
 */
 const auth = {
