@@ -1,15 +1,15 @@
-Line Etot JS
+Line Etot JS & Silent js
 `Version : Rework TAB`
+`Version : SilentJs`
 
 # require node >= v8.x.x
 check your nodejs version
 `node -v`
 [upgrade nodejs](https://google.com/search?q=How+To+Update+NodeJS)
 
-
-How to run ?
+Cara install?
 ------
-- `git clone https://gitlab.com/teamanubot/LineEtotJS.git`
+- `https://github.com/dhenza1415/SILENTJS`
 - `cd LineEtotJS && npm install`
 - `npm start`
 
@@ -20,7 +20,7 @@ New
 Note
 -------
 - Jangan Perjual Belikan Script Ini!
-- Ini Alphat Lama Tapi Di Upgrade
+- Ini Alphat Lama Tapi Di Upgrade oleh TAB dan di kembangkan Oleh TBP
 - Gunakan Script Ini Dengan Bijak!
 
 Still work :construction_worker:
@@ -37,7 +37,7 @@ Author
 
 Contact Me / Need Help ?
 ------
-[@LINE](http://line.me/ti/p/h_xdy2Clas) (rivaimunte)
+[@LINE](http://line.me/ti/p/~dhenz415) (rivaimunte)
 
 FAQ (Frequently Asked Questions)
 ------
