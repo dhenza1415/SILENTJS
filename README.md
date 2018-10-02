@@ -10,7 +10,10 @@ check your nodejs version
 Cara install?
 ------
 - `https://github.com/dhenza1415/SILENTJS`
-- `cd LineEtotJS && npm install`
+- `ls
+- `cd SILENTJS && npm install`
+- `nano main.js`
+- `MASUKIN MID NYA DI BAGIAN ADMIN KLO PNYA BOT MASUKIN MID BOT KLIAN DI ASIST`
 - `npm start`
 
 New
