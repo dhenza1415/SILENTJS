@@ -1,6 +1,6 @@
 const { hostname, platform } = require('os');
 
-const whichPlatform = platform() === 'darwin' ? 'MAC' : 'win32';
+const whichPlatform = platform() === 'DHENZA' ? 'MAC' : 'win32';
 
 const config = {
   LINE_DOMAIN: 'gd2.line.naver.jp',
@@ -33,7 +33,7 @@ const config = {
   LINE_SESSION_NAVER_URL: '/authct/v1/keys/naver',
   LINE_POST_CONTENT_URL: 'https://os.line.naver.jp/talk/m/upload.nhn',
   LINE_POST_CONTENT_URL_2ND: 'https://obs-sg.line-apps.com/talk/m/upload.nhn',
-  X_LINE_APP: 'IOSIPAD\t8.11.0\tTeamAnuBot-PC\t8.11.0',
+  X_LINE_APP: 'IOSIPAD\t8.11.0\tDhenza-PC\t8.11.0',
   ip: '11.2.5',
   version: '0.0.2',
   revision: 0,

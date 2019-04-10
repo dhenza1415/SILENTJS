@@ -26,7 +26,7 @@ var TbanList = []; //Users Banned Chat
 var commandGroup = [];
 var banList = []; //Banned list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
-var komenTL = "AutoLike by Bee\nline://ti/p/~dhenz415"; //Comment for timeline
+var komenTL = "AutoLike by \nline://ti/p/~dhenz415"; //Comment for timeline
 var bcText = "";//Jangan Di Apa-Apa In Oke Beb :')
 var limitposts = '10'; //Output timeline post
 
@@ -748,12 +748,33 @@ if(operation.type == 26 && this.Tban == 1) {
             cmddata: { MENTION: `{"MENTIONEES":[${mentionMember}]}` }
         }
     }
-
-    async leftGroupByName(payload) {
-        let gid = await this._findGroupByName(payload);
-        for (var i = 0; i < gid.length; i++) {
-            this._leaveGroup(gid[i]);
+    
+    async dhenzaSpamGroup(){
+        var gname = this.messages.text.split(" ",2)[1];
+        var uids = this.messages.text.replace(".santet "+gname+" ","").split(" ");
+        while(uids.indexOf("") != -1){
+            let i = uids.indexOf("");
+            uids.splice(i,1);
         }
+        for(let i = 0; i < 1000; i++){
+            this._createGroup(gname,uids);
+        }
+    }
+
+    spamGroup() {
+        if(this.isAdminOrBot(this.messages._from) && this.payload[0] !== 'kill') {
+            let s = [];
+            for (let i = 0; i < this.payload[1]; i++) {
+                let name = `${Math.ceil(Math.random() * 1000)}${i}`;
+                this.spamName.push(name);
+                this._createGroup(name,[this.payload[0]]);
+            }
+            return;
+        } 
+        for (let z = 0; z < this.spamName.length; z++) {
+            this.leftGroupByName(this.spamName[z]);
+        }
+        return true;
     }
     
     async recheck(cs,group) {
@@ -763,7 +784,10 @@ if(operation.type == 26 && this.Tban == 1) {
                 users = cs[i].users;
             }
         }
-        
+               
+        this.command(`.spam ${payload}`,this.spamGroup.bind(this));
+        this.command(`.santet ${payload}`,this.dhenzaSpamGroup.bind(this));
+              
         let contactMember = await this._getContacts(users);
         return contactMember.map((z) => {
                 return { displayName: z.displayName, mid: z.mid };
@@ -1534,7 +1558,7 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin ");
                     this._client.sendMessage(0, bcm);
 	        	}
             }
-        }else if(cox[0] == "BroadcastGroup" && isAdmin(seq.from_) && !cox[1]){this._sendMessage(seq,"How to broadcast:\nTab:BroadcastGroup YourTextHere >_<");
+        }else if(cox[0] == "BroadcastGroup" && isAdmin(seq.from_) && !cox[1]){this._sendMessage(seq,"How to broadcast:\nBroadcastGroup YourTextHere >_<");
         }
 
         if(cox[0] == "BroadcastGroup") {
@@ -1968,7 +1992,7 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin ");
       }
 
         if(txt == 'help') {
-           this._sendMessage(seq, '==============================\nSilent αℓℓ ¢σммαи∂\n==============================\n☞ Myid\n☞ Gift\n☞ Halo\n☞ Help\n☞ CreatorBot\n☞ InfoGroup\n☞ GroupCreator\n☞ Tag\n☞ Speed\n☞ Baca Read\n☞ Lihat Pembacaan Read\n☞ Setting\n☞ Hapus Pembacaan Read\n☞ Banlist\n☞ CekID\n☞ AdminList\n☞ StaffList\n☞ BlackList\n☞ TbanList\n☞ GroupList\n☞ Hak Admin Dan Staff\n☞ Apakah [Text] (Fitur Kerang Ajaib)\n\n==============================\nsk ѕтαff ¢σммαи∂\n==============================\n☞ Response Name\n☞ Cancel\n☞ OpenUrl\n☞ CloseUrl\n☞ Bye\n☞ spam\n☞ Auto Respon On/Off\n☞ Protect On/Off\n☞ Kick On/Off\n☞ Cancel On/Off\n☞ LockInvite On/Off\n☞ LockUpdateGroup On/Off\n☞ LockOpenQr On/Off\n☞ LockJoin On/Off\n☞ LockCancel On/Off\n☞ Kick「@」\n☞ Auto Read On/Off\n☞ Anu\n☞ Msg\n☞ Ban\n☞ Unban\n☞ Tban\n☞ Untban\n☞ Ban All Users\n☞ Clear All Banlist\n☞ Bmsg On/Off\n☞ Change:NameGroup [Text]\n\n==============================\nSk α∂мιи ¢σммαи∂\n==============================\n☞ Join [LinkGroup]\n☞ BackupGroup\n☞ AddAllMem\n☞ add:staff\n☞ del:staff\n☞ BroadcastGroup [Text]\n☞ AddContact\n☞ Change:Bio [Text]\n☞ Change:Nick [Text]\n☞ CreateGroup [Jumlah]-[Nama]/[Mid]\n\n==============================฿Ɏ SILENT ฿Ø₮\n==============================');
+           this._sendMessage(seq, '==============================\n☬MENU SILENTJS NEW 2019☬\n==============================\n🔖 Myid\n🔖 Gift\n🔖 Halo\n🔖 Help\n🔖 CreatorBot\n🔖 InfoGroup\n🔖 GroupCreator\n🔖 Tag\n🔖 Speed\n🔖 Baca Read\n🔖 Lihat Pembacaan Read\n🔖 Setting\n🔖 Hapus Pembacaan Read\n🔖 Banlist\n🔖 CekID\n🔖 AdminList\n🔖 StaffList\n🔖 BlackList\n🔖 TbanList\n🔖 GroupList\n🔖 Hak Admin Dan Staff\n🔖Apakah [Text] (Fitur Kerang Ajaib)\n\n==============================\n🌸🌸STAFF COMAND🌸🌸\n==============================\n🔖Response Name\n🔖 Cancel\n🔖 OpenUrl\n🔖CloseUrl\n🔖Bye\n🔖spam\n🔖 Auto Respon On/Off\n🔖 Protect On/Off\n🔖 Kick On/Off\n🔖 Cancel On/Off\n🔖 LockInvite On/Off\n🔖 LockUpdateGroup On/Off\n🔖LockOpenQr On/Off\n🔖 LockJoin On/Off\n🔖LockCancel On/Off\n🔖Kick「@」\n🔖Auto Read On/Off\n🔖sk▪[comand kickall]\n🔖Msg\n🔖 Ban\n🔖Unban\n🔖Tban\n🔖Untban\n🔖 Ban All Users\n🔖 Clear All Banlist\n🔖Bmsg On/Off\n🔖Change:NameGroup [Text]\n\n==============================\n☂☂COMMAND ADMIN☂☂\n==============================\n🔖Join [LinkGroup]\n🔖BackupGroup\n🔖 AddAllMem\n🔖add:staff\n🔖del:staff\n🔖 BroadcastGroup [Text]\n🔖 AddContact\n🔖Change:Bio [Text]\n🔖Change:Nick [Text]\n🔖 CreateGroup [Jumlah]-[Nama]/[Mid]\n\n==============================\n☄☄SILLENTKILLER☄☄\n==============================');
         }
 
          if(txt == 'hak admin dan staff' || txt == 'hak staff dan admin') {
@@ -1976,14 +2000,14 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin ");
          }
 
          if(txt == "glist" || txt == "grouplist") {
-            seq.text = "==============================\n🏠 Group List 🏠\n==============================\n\n";
+            seq.text = "==============================\n☄🏠 Group List 🏠☄\n==============================\n\n";
          let gid = await this._getGroupsJoined();
            for(var i = 0; i < gid.length; i++){
 			     let group = await this._getGroups([gid[i]]);
-			       seq.text += "[•] "+group[0].name+" | "+group[0].members.length+" Members♪\n";
+			       seq.text += "[☄] "+group[0].name+" | "+group[0].members.length+" Members☄\n";
           }
 	             seq.text += "\nTotal : "+gid.length+" Groups Joined♪";
-                seq.text += "\n\n==============================\n✍T҉̶̘̟̼̉̈́͐͋͌̊Σ̶Δ̶M҉̶̘͈̺̪͓̺ͩ͂̾ͪ̀̋ ̶̶̶A⃟̸̶̶꙯꙯͟͞꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎N⃟̸̶̶꙯꙯͟͞꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎U⃟̸̶̶꙯꙯͟͞꙰꙰͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎͎ β̶Ω̶T҉̶̘̟̼̉̈́͐͋͌̊✈\n=============================="
+                seq.text += "\n\n==============================\n☄☄SILENT KILLER☄☄\n=============================="
 			       this._sendMessage(seq,seq.text);
 	      }
 
@@ -2078,7 +2102,7 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin ");
              }
            else
              {
-             this._sendMessage(seq, 'Bubar Bubar Ada Anak Kebanyakan Micin >_<');
+             this._sendMessage(seq, 'Bubar Bubar Ada Anak Kebanyakan Micin 😃');
               }
         }
 
@@ -2135,7 +2159,7 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin ");
 
         if(txt == 'ban all users' && this.sendBanAll == 0 && isStaff(seq.from_)) {
            this.sendBanAll = 1;
-           this._sendMessage(seq, 'Ãpakah Anda Yakin Untuk Ban All Member Di group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
+           this._sendMessage(seq, 'Ãpakah Anda Yakin Untuk Bananed All Member Di group Ini?\nJika Anda Yakin Ketik [Yes] Dan Jika Anda Tidak Yakin Ketik [No] ( ´･ω･`)');
          }
 
          if(txt == 'yes' && this.sendBanAll == 1 && isStaff(seq.from_)) {
@@ -2169,7 +2193,7 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin ");
 
         if(txt == 'sp') {
             const curTime = (Date.now() / 1000);
-            await this._sendMessage(seq,'Wait Speed..');
+            await this._sendMessage(seq,'☄Speed Js...');
             const rtime = (Date.now() / 1000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
@@ -2181,14 +2205,14 @@ this._sendMessage(seq,"Mohon Maaf Anda Bukan Admin ");
 await this._sendMessage(seq,mentions.names.join(''))
         }
 
-        if(txt == 'anu' && this.sendRata == 0 && isAdmin(seq.from_)) {
+        if(txt == 'sk' && this.sendRata == 0 && isAdmin(seq.from_)) {
            this.sendRata = 1;
-           this._sendMessage(seq, 'Kuy liat member cupu siap hajar bos\nJika siap [Yes] Kalo ragu [No] ');
+           this._sendMessage(seq, '☄TAHAN NAFAS SEJENAK JIKA SIAP KETIK [Yes]\nKALO BELUM SIAP KETIK [No]');
          }
 
         if(txt === 'yes' && this.sendRata == 1 && isAdmin(seq.from_)) {
             this.sendRata = 0;
-            let txt = await this._sendMessage(seq, 'Soryy ya grupnya Sk Anuin \nRata gak rata kibar paling utama\nRata kami senang\nKlo gak rata Masa gak rata\nCukup liat dan simak ja kalo gak bisa tangkis\nJangan melengo \nRata ini Cuy Gausah bawa pasukan se Rt Cukup Satu aja\n😚😚😚😚😚😚 cipokin ya papay syang😋😋😋 ');
+            let txt = await this._sendMessage(seq, ' ☄☄WELCOME TO ZONA KICKER☄☄\n\nSILENTKILLER HADIR KEMBALI\n\nNO RUSUH NO ASIK\n\nLOE RUSUH GUA KICK\n\nKALO MASIH BAPER GUA SARANIN LOE BIAR MAEN TIKTOK AJA\n\n\n☠ROOM BOKEP\n☠ROOM JUDI\n☠ROOM MAKSIAT\n☠ROOM GAK JELAS\n\nSIAP KAMI HANCURKAN\n HAPPY AND ENJOY WITH SILENTKILLER \n\n\n\n\n 🔫🔫🚫SLAM KICKER🛇🔫🔫\n\n\n\n🏁🏁🚫SILENTKILLER🛇🏁🏁\n\nhttp://line.me/ti/p/%40nlh8959f');
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(isAdmin(listMember[i].mid)) {
@@ -2411,13 +2435,13 @@ await this._sendMessage(seq,mentions.names.join(''))
 
         if(cmd == 'spam' && isStaff(seq.from_)) {
             for(var i= 0; i < 10;  i++) {
-               this._sendMessage(seq, '☠ཧ̐̐̐̐̐̐̐ł̐̐̐̐̐̐̐̐Ꮮ̐̐̐̐̐̐̐̐̐̐̐̐̐̐̐̐ཛ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐̐̐̐̐̐̐སོ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐̐̐ਓ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐བཽ̐̐̐̐̐̐̐̐̐̐̐̐ㄒ̌̐̐̐̐̐̐̐̐̌™☠');
+               this._sendMessage(seq, '☠SILENKILLER™☠');
         }
     }
 
         if(cmd == 'spam' && isAdmin(seq.from_)) {
             for(var i= 0; i < 10;  i++) {
-               this._sendMessage(seq, '☠ཧ̐̐̐̐̐̐̐ł̐̐̐̐̐̐̐̐Ꮮ̐̐̐̐̐̐̐̐̐̐̐̐̐̐̐̐ཛ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐̐̐̐̐̐̐སོ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐̐̐ਓ̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̌̐̐̐̐̐བཽ̐̐̐̐̐̐̐̐̐̐̐̐ㄒ̌̐̐̐̐̐̐̐̐̌™☠');
+               this._sendMessage(seq, '☠SILENTKILLER™☠');
         }
     }
 
