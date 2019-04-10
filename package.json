@@ -1,5 +1,5 @@
 {
-  "name": "LineEtotJS",
+  "name": "SILENTJS",
   "version": "0.6.9",
   "description": "LINE",
   "main": "./src/main.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/teamanubot/LineEtotJS.git"
+    "url": "github.com/dhenza1415"
   },
   "author": "Rivai <rivaimunthe02@gmail.com>",
   "license": "MIT",
@@ -29,9 +29,9 @@
     "moment": "^2.18.1"
   },
   "bugs": {
-    "url": "https://gitlab.com/teamanubot/LineEtotJS/issues"
+    "url": "https://github.com/dhenza1415/SILENTJS/issues"
   },
-  "homepage": "https://gitlab.com/teamanubot/LineEtotJS#README",
+  "homepage": "https://github.com/dhenza1415/SILENTJS/#README",
   "keywords": [
     "line"
   ]
